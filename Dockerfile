@@ -10,7 +10,7 @@ RUN adduser --shell /bin/bash --gecos "" --disabled-password --home /home/oscar 
 USER oscar
 WORKDIR /home/oscar
 
-RUN julia -e 'using Pkg; pkg" add Oscar; add IJulia; precompile "'
+RUN julia -e 'using Pkg; pkg" add Oscar; add IJulia; precompile "; using Oscar'
 
 RUN mkdir -p ~/.julia/config
 RUN echo 'println("Welcome! Type \"using Oscar\" to start...")' > ~/.julia/config/startup.jl

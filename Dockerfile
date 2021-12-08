@@ -1,7 +1,8 @@
 FROM julia:buster
 
 RUN apt update
-RUN apt install -y --no-install-recommends build-essential m4 python3 python3-dev python3-pip python3-setuptools git wget 
+RUN apt install -y --no-install-recommends build-essential m4 python3 python3-dev python3-pip python3-setuptools git wget
+RUN apt install -y libffi-dev
 
 RUN pip3 install wheel
 RUN pip3 install jupyterlab

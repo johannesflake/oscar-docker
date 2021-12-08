@@ -3,7 +3,6 @@ FROM julia:bullseye
 RUN apt update
 RUN apt install -y --no-install-recommends build-essential python3 python3-dev python3-pip python3-setuptools git wget
 
-RUN pip3 install wheel
 RUN pip3 install jupyterlab
 RUN pip3 install sympy
 

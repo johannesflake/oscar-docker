@@ -8,3 +8,8 @@ To use this docker image, open a terminal with docker available and type:
 ```bash
 docker run -it johannesflake/oscar
 ```
+
+To update the docker image, open a terminal with docker available and type:
+```bash
+docker pull johannesflake/oscar
+```

@@ -22,7 +22,7 @@ jobs:
         with:
           push: true
           tags: johannesflake/oscar:julia-1.7, johannesflake/oscar:latest
-          build-args: JULIA-VERSION=1.7
+          build-args: JULIA-VERSION=1.7-bullseye
       -
         name: Build and push LTS
         id: docker_build
@@ -30,4 +30,4 @@ jobs:
         with:
           push: true
           tags: johannesflake/oscar:julia-1.6
-          build-args: JULIA-VERSION=1.6
+          build-args: JULIA-VERSION=1.6-bullseye

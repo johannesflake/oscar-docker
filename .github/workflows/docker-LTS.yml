@@ -22,4 +22,4 @@ jobs:
         with:
           push: true
           tags: johannesflake/oscar:julia-1.6, johannesflake/oscar:LTS
-          build-args: JULIA-VERSION=1.6-bullseye
+          build-args: JULIAVERSION=1.6-bullseye

@@ -1,4 +1,5 @@
-FROM julia:bullseye
+ARG JULIA-VERSION=bullseye 
+FROM julia:$JULIA-VERSION
 
 RUN apt update
 RUN apt install -y --no-install-recommends build-essential python3 python3-dev python3-pip python3-setuptools git wget

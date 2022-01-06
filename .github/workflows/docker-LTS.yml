@@ -3,7 +3,8 @@ on:
   schedule:
     # run at 0:00 every Monday
     - cron:  '0 0 * * MON'
-    
+  workflow_dispatch: # manually
+
 jobs:
   docker:
     runs-on: ubuntu-latest

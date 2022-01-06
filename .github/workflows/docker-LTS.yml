@@ -1,0 +1,24 @@
+name: ci
+on:
+  schedule:
+    # run at 0:00 every Monday
+    - cron:  '0 0 * * MON'
+    
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Login to DockerHub
+        uses: docker/login-action@v1 
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      -
+        name: Build and push
+        id: docker_build
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: johannesflake/oscar:julia-1.6, johannesflake/oscar:LTS
+          build-args: JULIA-VERSION=1.6-bullseye

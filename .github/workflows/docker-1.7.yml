@@ -22,5 +22,5 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: johannesflake/oscar:julia-1.7, johannesflake/oscar:latest
+          tags: johannesflake/oscar:julia-1.7
           build-args: JULIAVERSION=1.7-bullseye
